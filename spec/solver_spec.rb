@@ -21,4 +21,12 @@ describe Solver do
       expect { @solver.factorial(-1) }.to raise_error(ArgumentError)
     end
   end
+
+  describe '#reverse' do
+    it 'returns the reverse of a string' do
+      expect(@solver.reverse('hello')).to eq 'olleh'
+      expect(@solver.reverse('world')).to eq 'dlrow'
+      expect(@solver.reverse('hello world')).to eq 'dlrow olleh'
+    end
+  end
 end
