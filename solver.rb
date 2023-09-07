@@ -4,4 +4,8 @@ class Solver
     return 1 if num <= 1
     (1..num).reduce(:*)
   end
+
+  def reverse(str)
+    str.reverse
+  end
 end
