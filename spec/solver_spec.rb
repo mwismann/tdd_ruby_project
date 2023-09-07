@@ -29,4 +29,22 @@ describe Solver do
       expect(@solver.reverse('hello world')).to eq 'dlrow olleh'
     end
   end
+
+  describe '#fizzbuzz' do
+    it 'returns fizzbuzz when given a multiple of 3 and 5' do
+      expect(@solver.fizzbuzz(15)).to eq 'fizzbuzz'
+    end
+
+    it 'returns fizz when given a multiple of 3' do
+      expect(@solver.fizzbuzz(18)).to eq 'fizz'
+    end
+
+    it 'returns buzz when given a multiple of 5' do
+      expect(@solver.fizzbuzz(25)).to eq 'buzz'
+    end
+
+    it 'returns the string of the number when given a value that is not a multiple of 3 or 5' do
+      expect(@solver.fizzbuzz(7)).to eq '7'
+    end
+  end
 end
